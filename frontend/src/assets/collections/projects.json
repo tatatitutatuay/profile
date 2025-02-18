@@ -1,0 +1,26 @@
+[
+  {
+    "name": "A2K",
+    "description": "A machine learning API for advanced keyword extraction.",
+    "urlImg": "/projects/a2k.png",
+    "link": "https://dsde-project.vercel.app/"
+  },
+  {
+    "name": "Automatic Planting",
+    "description": "An IoT system with an embedding server to transfer data from hardware to a web server. Also created a LINE webhook for messaging API.",
+    "urlImg": "/projects/a2k.png",
+    "link": "https://ineedyourwater.vercel.app/"
+  },
+  {
+    "name": "Farming Game",
+    "description": "Desktop game -> farming cooking using java",
+    "urlImg": "/projects/a2k.png",
+    "link": "https://github.com/2110215-ProgMeth/project-cedt-2023-2-helloworld"
+  },
+  {
+    "name": "Friday Activity System",
+    "description": "A web application for CEDT students to register and apply for activities.",
+    "urlImg": "/projects/a2k.png",
+    "link": "https://github.com/Darjeeling47/Friday-Act-Backend"
+  }
+]
