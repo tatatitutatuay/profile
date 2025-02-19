@@ -8,13 +8,13 @@
   {
     "name": "Automatic Planting",
     "description": "An IoT system with an embedding server to transfer data from hardware to a web server. Also created a LINE webhook for messaging API.",
-    "urlImg": "/projects/a2k.png",
+    "urlImg": "/projects/inyw.png",
     "link": "https://ineedyourwater.vercel.app/"
   },
   {
     "name": "Farming Game",
     "description": "Desktop game -> farming cooking using java",
-    "urlImg": "/projects/a2k.png",
+    "urlImg": "/projects/pakgad.png",
     "link": "https://github.com/2110215-ProgMeth/project-cedt-2023-2-helloworld"
   },
   {
