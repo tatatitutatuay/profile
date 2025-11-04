@@ -1,9 +1,21 @@
 [
   {
+    "name": "ESG Platform",
+    "description": "A platform to help companies manage and report their Environmental, Social, and Governance (ESG) data effectively using AI to analyze the gaps in their reporting.",
+    "urlImg": "/projects/esg.png",
+    "link": "https://app.esg-ai.wankaew.com"
+  },
+  {
     "name": "A2K",
-    "description": "A machine learning API for advanced keyword extraction.",
+    "description": "A machine learning API for advanced keyword extraction using ML techniques with paper data.",
     "urlImg": "/projects/a2k.png",
     "link": "https://dsde-project.vercel.app/"
+  },
+  {
+    "name": "TataDo",
+    "description": "A project management web application to track progress, and manage tasks efficiently.",
+    "urlImg": "/projects/tatado.png",
+    "link": "https://tatado.vercel.app/"
   },
   {
     "name": "Automatic Planting",
@@ -16,11 +28,5 @@
     "description": "Desktop game -> farming cooking using java",
     "urlImg": "/projects/pakgad.png",
     "link": "https://github.com/2110215-ProgMeth/project-cedt-2023-2-helloworld"
-  },
-  {
-    "name": "Friday Activity System",
-    "description": "A web application for CEDT students to register and apply for activities.",
-    "urlImg": "/projects/a2k.png",
-    "link": "https://github.com/Darjeeling47/Friday-Act-Backend"
   }
 ]

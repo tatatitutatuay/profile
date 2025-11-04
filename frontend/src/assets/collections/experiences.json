@@ -2,14 +2,25 @@
   {
     "dates": "May 2024 - July 2024",
     "company": "ACIS Professional Center Co., Ltd.",
-    "description": "I had interned at ACIS Professional Center Co., Ltd as a cyber security consultant. I was responsible for analyzing and identifying vulnerabilities in the system, as well as providing solutions to prevent cyber attacks. Especially in the field of AI applications.",
+    "description": "I had interned at ACIS Professional Center Co., Ltd as a cyber security consultant. I was responsible for researching vulnerabilities in the system, as well as providing solutions to prevent cyber attacks. Especially in the field of AI applications.",
     "svgIcon": "<svg class='size-4 text-gray-600 dark:text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'> <path stroke-linecap='round' stroke-width='2' d='M8 8V6a2 2 0 012-2h4a2 2 0 012 2v2' /> <path stroke-linecap='round' stroke-width='2' d='M4 14l3.15.787a20 20 0 009.7 0L20 14' /> <path stroke-linejoin='round' stroke-width='2' d='M4 10a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z' /><circle cx='12' cy='12' r='1' /></svg>"
   },
   {
-    "dates": " August 2024- Present",
+    "dates": "May 2025 - August 2025",
+    "company": "Indragate Mission Co., Ltd.",
+    "description": "Interned at Indragate Mission Co., Ltd. as a Software Developer Intern. I was responsible for developing an application that help farmers manage their crops more efficiently using technologies",
+    "svgIcon": "<svg class='size-4 text-gray-600 dark:text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'> <path stroke-linecap='round' stroke-width='2' d='M8 8V6a2 2 0 012-2h4a2 2 0 012 2v2' /> <path stroke-linecap='round' stroke-width='2' d='M4 14l3.15.787a20 20 0 009.7 0L20 14' /> <path stroke-linejoin='round' stroke-width='2' d='M4 10a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z' /><circle cx='12' cy='12' r='1' /></svg>"
+  },
+  {
+    "dates": " August 2025 - Present",
+    "company": "Indragate Mission Co., Ltd.",
+    "description": "Currently working for Indragate Mission Co., Ltd. as a Software Developer. My role involves designing, coding, and testing software applications to meet client requirements.",
+    "svgIcon": "<svg class='size-4 text-gray-600 dark:text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'> <path stroke-linecap='round' stroke-width='2' d='M8 8V6a2 2 0 012-2h4a2 2 0 012 2v2' /> <path stroke-linecap='round' stroke-width='2' d='M4 14l3.15.787a20 20 0 009.7 0L20 14' /> <path stroke-linejoin='round' stroke-width='2' d='M4 10a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z' /><circle cx='12' cy='12' r='1' /></svg>"
+  },
+  {
+    "dates": " August 2024 - Present",
     "company": "Chulalorngorn University",
-    "description": " I am currently studying in the Faculty of Engineering at Chulalorngorn University, majoring in Computer Engineering and Digital Technology.",
+    "description": "Currently studying in the Faculty of Engineering at Chulalorngorn University, majoring in Computer Engineering and Digital Technology.",
     "svgIcon": "<svg class='size-4 text-gray-600 dark:text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'> <path stroke-linecap='round' stroke-width='2' d='M8 8V6a2 2 0 012-2h4a2 2 0 012 2v2' /> <path stroke-linecap='round' stroke-width='2' d='M4 14l3.15.787a20 20 0 009.7 0L20 14' /> <path stroke-linejoin='round' stroke-width='2' d='M4 10a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8z' /><circle cx='12' cy='12' r='1' /></svg>"
   }
-  
 ]
