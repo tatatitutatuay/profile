@@ -1,0 +1,35 @@
+[
+  {
+    "topic": "Languages",
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Go",
+      "Java",
+      "C++",
+      "Dart (Flutter)"
+    ]
+  },
+  {
+    "topic": "Frameworks & Libraries",
+    "skills": [
+      "ElysiaJS",
+      "Go Fiber",
+      "Node.js",
+      "Express",
+      "FastAPI",
+      "Next.js",
+      "React",
+      "Prisma"
+    ]
+  },
+  {
+    "topic": "Tools",
+    "skills": ["Git", "Docker", "Nginx", "Postman", "Linux"]
+  },
+  {
+    "topic": "Databases",
+    "skills": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite"]
+  }
+]
