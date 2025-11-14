@@ -12,12 +12,6 @@
     "link": "https://dsde-project.vercel.app/"
   },
   {
-    "name": "TataDo",
-    "description": "A web-based project management system designed to efficiently track progress, visualize timelines, and organize tasks for better workflow management.",
-    "urlImg": "/projects/tatado.png",
-    "link": "https://tatado.vercel.app/"
-  },
-  {
     "name": "Automatic Planting",
     "description": "Embedded IoT system for sensor data acquisition and data transfer to a web dashboard, alongside a LINE Messaging API webhook for automated event-based messaging.",
     "urlImg": "/projects/inyw.png",
@@ -28,5 +22,11 @@
     "description": "A Java-based desktop pixel game that combines farming and cooking gameplay, allowing players to grow crops, gather ingredients, and create dishes in a retro-style environment.",
     "urlImg": "/projects/pakgad.png",
     "link": "https://github.com/2110215-ProgMeth/project-cedt-2023-2-helloworld"
+  },
+  {
+    "name": "TataDo",
+    "description": "A web-based project management system designed to efficiently track progress, visualize timelines, and organize tasks for better workflow management.",
+    "urlImg": "/projects/tatado.png",
+    "link": "https://tatado.vercel.app/"
   }
 ]
