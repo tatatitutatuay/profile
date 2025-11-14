@@ -5,6 +5,8 @@ import TimelineItem from "../components/TimelineItem.astro";
 import Project from "../components/Project.astro";
 import EXPERIENCES from "../assets/collections/experiences.json";
 import PROJECTS from "../assets/collections/projects.json";
+import SKILLS from "../assets/collections/skills.json";
+import ACTIVITIES from "../assets/collections/activities.json";
 ---
 
 <Layout>
@@ -107,7 +109,7 @@ import PROJECTS from "../assets/collections/projects.json";
             <h3
               class="text-lg sm:text-xl font-semibold text-gray-950 dark:text-white"
             >
-              Want to know a bit more?
+              Download My Resume
             </h3>
             <a
               href="/docs/resume.pdf"
@@ -162,17 +164,36 @@ import PROJECTS from "../assets/collections/projects.json";
         >
       </div>
     </section>
-    <!-- <section id="services" class="flex flex-col overflow-hidden">
-    <h2
-      class="text-2xl md:text-4xl font-bold text-gray-950 dark:text-white mb-8"
-    >
-      Services
-    </h2>
-    <article class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {SERVICES.map((service) => <CardService service={service} />)}
-    </article>
-  </section> -->
-    <!-- <HireServiceModal /> -->
+    <section id="skills" class="flex flex-col mt-16 mb-8">
+      <h2
+        class="text-2xl md:text-4xl font-bold text-gray-950 dark:text-white mb-8"
+      >
+        My Skills
+      </h2>
+      <div
+        id="services"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {
+          SKILLS.map((skillTopic) => (
+            <Card className="card card-service p-4">
+              <div class="flex flex-col">
+                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-950 dark:text-white mb-4">
+                  {skillTopic.topic}
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  {skillTopic.skills.map((skill) => (
+                    <span class="px-3 py-1 text-sm sm:text-base rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-800 dark:text-gray-200">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Card>
+          ))
+        }
+      </div>
+    </section>
   </section>
 
   <script>
