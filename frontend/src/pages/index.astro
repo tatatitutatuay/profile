@@ -7,39 +7,17 @@ import EXPERIENCES from "../assets/collections/experiences.json";
 import PROJECTS from "../assets/collections/projects.json";
 import SKILLS from "../assets/collections/skills.json";
 import ACTIVITIES from "../assets/collections/activities.json";
-const topicStyles: Record<
-  string,
-  { gradient: string; accent: string; badgeBg: string }
-> = {
-  Languages: {
-    gradient: "from-indigo-50 to-indigo-100",
-    accent: "text-indigo-700",
-    badgeBg: "bg-indigo-50/80",
-  },
-  "Frameworks & Libraries": {
-    gradient: "from-teal-50 to-teal-100",
-    accent: "text-teal-700",
-    badgeBg: "bg-teal-50/80",
-  },
-  Tools: {
-    gradient: "from-yellow-50 to-yellow-100",
-    accent: "text-yellow-700",
-    badgeBg: "bg-yellow-50/80",
-  },
-  Databases: {
-    gradient: "from-rose-50 to-rose-100",
-    accent: "text-rose-700",
-    badgeBg: "bg-rose-50/80",
-  },
-};
 
-const stylesFor = (topic: string) =>
-  topicStyles[topic] ?? {
-    gradient: "from-gray-50 to-gray-100",
-    accent: "text-gray-700",
-    badgeBg: "bg-gray-50/80",
-    emoji: "⭐",
-  };
+const stylesFor = (topic: string) => {
+  const found = SKILLS.find((t) => t.topic === topic);
+  return (
+    (found && found.style) ?? {
+      gradient: "from-gray-50 to-gray-100",
+      accent: "text-gray-700",
+      badgeBg: "bg-gray-50/80",
+    }
+  );
+};
 ---
 
 <Layout>
