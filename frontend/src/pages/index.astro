@@ -190,7 +190,7 @@ const stylesFor = (topic: string) => {
             const s = stylesFor(skillTopic.topic);
             return (
               <Card
-                className={`card card-service p-6 transform transition duration-300 hover:-translate-y-1 hover:shadow-lg`}
+                className={`card card-service p-6 hover:-translate-y-1 hover:shadow-lg`}
               >
                 <div class="flex flex-col">
                   <div class="flex items-center gap-4 mb-4">
@@ -202,7 +202,7 @@ const stylesFor = (topic: string) => {
                     {skillTopic.skills.map((skill) => (
                       <span
                         role="listitem"
-                        class={`px-3 py-1 text-sm sm:text-base rounded-full ${s.badgeBg} ${s.accent} border border-transparent hover:scale-105 transform transition`}
+                        class={`px-3 py-1 text-sm sm:text-base rounded-full ${s.badgeBg} ${s.accent} border border-transparent hover:scale-105`}
                       >
                         {skill}
                       </span>
@@ -216,23 +216,4 @@ const stylesFor = (topic: string) => {
       </div>
     </section>
   </section>
-
-  <script>
-    import { animate, inView, stagger } from "motion";
-
-    window.addEventListener("DOMContentLoaded", () => {
-      inView("#services", () => {
-        animate(
-          ".card-service",
-          {
-            transform: ["translateY(100%)", "translateY(0)"],
-          },
-          {
-            delay: stagger(0.2),
-            duration: 0.6,
-          }
-        );
-      });
-    });
-  </script>
 </Layout>
