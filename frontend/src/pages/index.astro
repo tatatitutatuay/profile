@@ -7,6 +7,39 @@ import EXPERIENCES from "../assets/collections/experiences.json";
 import PROJECTS from "../assets/collections/projects.json";
 import SKILLS from "../assets/collections/skills.json";
 import ACTIVITIES from "../assets/collections/activities.json";
+const topicStyles: Record<
+  string,
+  { gradient: string; accent: string; badgeBg: string }
+> = {
+  Languages: {
+    gradient: "from-indigo-50 to-indigo-100",
+    accent: "text-indigo-700",
+    badgeBg: "bg-indigo-50/80",
+  },
+  "Frameworks & Libraries": {
+    gradient: "from-teal-50 to-teal-100",
+    accent: "text-teal-700",
+    badgeBg: "bg-teal-50/80",
+  },
+  Tools: {
+    gradient: "from-yellow-50 to-yellow-100",
+    accent: "text-yellow-700",
+    badgeBg: "bg-yellow-50/80",
+  },
+  Databases: {
+    gradient: "from-rose-50 to-rose-100",
+    accent: "text-rose-700",
+    badgeBg: "bg-rose-50/80",
+  },
+};
+
+const stylesFor = (topic: string) =>
+  topicStyles[topic] ?? {
+    gradient: "from-gray-50 to-gray-100",
+    accent: "text-gray-700",
+    badgeBg: "bg-gray-50/80",
+    emoji: "⭐",
+  };
 ---
 
 <Layout>
@@ -175,22 +208,32 @@ import ACTIVITIES from "../assets/collections/activities.json";
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {
-          SKILLS.map((skillTopic) => (
-            <Card className="card card-service p-4">
-              <div class="flex flex-col">
-                <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-950 dark:text-white mb-4">
-                  {skillTopic.topic}
-                </h3>
-                <div class="flex flex-wrap gap-2">
-                  {skillTopic.skills.map((skill) => (
-                    <span class="px-3 py-1 text-sm sm:text-base rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-800 dark:text-gray-200">
-                      {skill}
-                    </span>
-                  ))}
+          SKILLS.map((skillTopic) => {
+            const s = stylesFor(skillTopic.topic);
+            return (
+              <Card
+                className={`card card-service p-6 transform transition duration-300 hover:-translate-y-1 hover:shadow-lg`}
+              >
+                <div class="flex flex-col">
+                  <div class="flex items-center gap-4 mb-4">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-950 dark:text-white">
+                      {skillTopic.topic}
+                    </h3>
+                  </div>
+                  <div class="flex flex-wrap gap-2" role="list">
+                    {skillTopic.skills.map((skill) => (
+                      <span
+                        role="listitem"
+                        class={`px-3 py-1 text-sm sm:text-base rounded-full ${s.badgeBg} ${s.accent} border border-transparent hover:scale-105 transform transition`}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </Card>
-          ))
+              </Card>
+            );
+          })
         }
       </div>
     </section>
