@@ -31,9 +31,11 @@ const stylesFor = (topic: string) => {
           My skills and expertise include:
         </h2>
         <div class="flex flex-col sm:flex-row gap-4 overflow-hidden relative">
-          <Card className="card">
+          <Card
+            className="card group transform transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
             <div
-              class="rounded-full p-4 grid place-content-center bg-yellow-50 text-yellow-500 dark:bg-yellow-950/30 dark:text-yellow-700 w-fit"
+              class="rounded-full p-4 grid place-content-center bg-yellow-50 text-yellow-500 dark:bg-yellow-950/30 dark:text-yellow-700 w-fit group-hover:scale-105 group-hover:bg-yellow-100 transition-transform"
             >
               <svg
                 class="size-8"
@@ -58,9 +60,11 @@ const stylesFor = (topic: string) => {
               >.
             </p>
           </Card>
-          <Card className="card">
+          <Card
+            className="card group transform transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
             <div
-              class="rounded-full p-4 grid place-content-center bg-blue-50 text-blue-500 dark:bg-blue-950/30 dark:text-blue-700 w-fit"
+              class="rounded-full p-4 grid place-content-center bg-blue-50 text-blue-500 dark:bg-blue-950/30 dark:text-blue-700 w-fit group-hover:scale-105 group-hover:bg-blue-100 transition-transform"
             >
               <svg
                 class="size-8"
