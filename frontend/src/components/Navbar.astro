@@ -14,20 +14,20 @@ if (pathname == "/") {
 ---
 
 <header
-  class="max-w-screen-lg mx-auto flex flex-wrap justify-between py-1 px-4 sm:px-6 items-center sticky top-0 z-50 lg:rounded-b-md bg-white dark:bg-gray-950 dark:bg-opacity-90">
-  <a href="/">
-    
+  class="max-w-screen-lg mx-auto flex flex-wrap justify-between py-3 px-4 sm:px-6 items-center sticky top-0 z-50 lg:rounded-b-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md dark:shadow-xl border-b border-gray-200/50 dark:border-neutral-700/50">
+  <a href="/" class="flex items-center gap-2 group">
+    <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">TC</span>
   </a>
   <div class="sm:order-2 flex items-center gap-3 text-gray-900">
     <button
       title="Theme Toggle"
       aria-label="Theme Toggle"
       id="theme-toggle"
-      class="flex items-center gap-2 dark:text-white"
+      class="flex items-center gap-2 dark:text-white p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
     >
       <svg
         id="theme-sun-icon"
-        class="size-5"
+        class="size-5 transition-transform duration-300 hover:rotate-180"
         aria-label="Sun Icon"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ if (pathname == "/") {
       >
       <svg
         id="theme-moon-icon"
-        class="size-5"
+        class="size-5 transition-transform duration-300 hover:rotate-12"
         aria-label="Moon Icon"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ if (pathname == "/") {
       title="Navbar Toggle"
       aria-label="Navbar Toggle"
       id="navbar-toggle"
-      class="sm:hidden dark:text-white"
+      class="sm:hidden dark:text-white p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300"
     >
       <svg
         aria-label="Menu Icon"
@@ -87,16 +87,17 @@ if (pathname == "/") {
     class="hidden -translate-y-[200%] transition-transform p-4 sm:block sm:translate-y-0 sm:static sm:p-0 w-full sm:w-auto text-sm lg:text-base"
   >
     <ul
-      class="flex flex-col items-center gap-4 lg:gap-6 border border-dashed border-gray-500 rounded-md font-semibold text-gray-500 p-4 sm:p-2 sm:border-none sm:bg-transparent sm:flex-row"
+      class="flex flex-col items-center gap-4 lg:gap-6 border border-dashed border-gray-400 dark:border-gray-600 rounded-lg font-semibold text-gray-600 dark:text-gray-400 p-4 sm:p-2 sm:border-none sm:bg-transparent sm:flex-row"
     >
       {
         links.map((link, i) => (
           <li>
             <a
               href={link}
-              class="hover:text-gray-950 dark:hover:text-white dark:text-gray-400"
+              class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 relative group"
             >
               {linkNames[i]}
+              <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </a>
           </li>
         ))

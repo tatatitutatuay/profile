@@ -9,32 +9,43 @@ import "../styles/global.css";
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Thirathawat</title>
+    <title>Thirathawat Chanakit - Full Stack Developer Portfolio</title>
 
-    <!-- Metas -->
+    <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="A small developer portfolio"
+      content="Portfolio of Thirathawat Chanakit, a Computer Engineering student specializing in backend and frontend development with expertise in Node.js, React, Next.js, and more."
     />
+    <meta name="keywords" content="Full Stack Developer, Backend Developer, Frontend Developer, Node.js, React, Next.js, Portfolio, Web Development" />
+    <meta name="author" content="Thirathawat Chanakit" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Thirathawat Chanakit - Full Stack Developer" />
+    <meta property="og:description" content="Computer Engineering student specializing in backend and frontend development" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
-  <body class="dark:bg-gray-950">
-    <img
-      class="fixed top-0 left-0 size-full -z-10 blur-2xl"
-      src={background.src}
-      alt=""
-      fetchpriority="high"
-    />
+  <body class="dark:bg-gray-950 animate-fade-in">
+    <!-- Animated Background -->
+    <div class="fixed top-0 left-0 size-full -z-10 overflow-hidden">
+      <img
+        class="absolute top-0 left-0 size-full blur-3xl opacity-60"
+        src={background.src}
+        alt=""
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/30 to-pink-50/50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20"></div>
+    </div>
+    
     <Navbar />
     <main class="max-w-screen-lg mx-auto p-6 flex flex-col gap-12">
       <slot />
     </main>
     <Footer />
   </body>
-  <style is:global>
-    * {
-      scroll-behavior: smooth;
-    }
-  </style>
 </html>
