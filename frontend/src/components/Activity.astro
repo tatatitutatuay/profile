@@ -1,0 +1,65 @@
+---
+import Card from "./Card.astro";
+
+interface Props {
+  activity: {
+    name: string;
+    description: string;
+    urlImg?: string;
+    link?: string;
+  };
+}
+
+const { activity } = Astro.props;
+---
+
+<Card className="card p-0 hover-lift overflow-hidden">
+  {
+    activity.link ? (
+      <a
+        href={activity.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex flex-col gap-4 h-full group"
+      >
+        {activity.urlImg && (
+          <div class="w-full h-48 overflow-hidden">
+            <img
+              src={activity.urlImg}
+              alt={activity.name}
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+        )}
+        <div class="px-6 pb-6 pt-2">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-950 dark:text-white mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+            {activity.name}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+            {activity.description}
+          </p>
+        </div>
+      </a>
+    ) : (
+      <div class="flex flex-col gap-4 h-full">
+        {activity.urlImg && (
+          <div class="w-full h-48 overflow-hidden">
+            <img
+              src={activity.urlImg}
+              alt={activity.name}
+              class="w-full h-full object-cover"
+            />
+          </div>
+        )}
+        <div class="px-6 pb-6 pt-2">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-950 dark:text-white mb-2">
+            {activity.name}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
+            {activity.description}
+          </p>
+        </div>
+      </div>
+    )
+  }
+</Card>

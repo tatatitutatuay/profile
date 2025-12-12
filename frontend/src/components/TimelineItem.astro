@@ -4,9 +4,10 @@ interface Props {
   date: string;
   description: string;
   badgeText?: string;
+  link?: string;
 }
 
-const { title, date, description, badgeText } = Astro.props;
+const { title, date, description, badgeText, link } = Astro.props;
 ---
 
 <li class="mb-10 ms-8 animate-slide-up">
@@ -18,7 +19,20 @@ const { title, date, description, badgeText } = Astro.props;
   <h3
     class="flex items-center mb-1 text-lg font-semibold text-gray-950 dark:text-white"
   >
-    {title}
+    {
+      link ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+        >
+          {title}
+        </a>
+      ) : (
+        title
+      )
+    }
     {
       badgeText && (
         <span class="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded-full ms-3 shadow-md">
@@ -27,7 +41,8 @@ const { title, date, description, badgeText } = Astro.props;
       )
     }
   </h3>
-  <time class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400"
+  <time
+    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-400"
     >{date}</time
   >
   <p

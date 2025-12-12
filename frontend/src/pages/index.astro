@@ -3,6 +3,7 @@ import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import TimelineItem from "../components/TimelineItem.astro";
 import Project from "../components/Project.astro";
+import Activity from "../components/Activity.astro";
 import EXPERIENCES from "../assets/collections/experiences.json";
 import PROJECTS from "../assets/collections/projects.json";
 import SKILLS from "../assets/collections/skills.json";
@@ -22,18 +23,23 @@ const stylesFor = (topic: string) => {
 
 <Layout>
   <section id="home" class="flex flex-col">
-    <article class="text-gray-950 dark:text-white text-pretty mx-auto animate-slide-up">
+    <article
+      class="text-gray-950 dark:text-white text-pretty mx-auto animate-slide-up"
+    >
       <h1 class="text-4xl md:text-6xl font-bold max-w-screen-sm">
-        Welcome 👋, I'm <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Thirathawat Chanakit</span>
+        Welcome 👋, I'm <span
+          class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+          >Thirathawat Chanakit</span
+        >
       </h1>
       <div class="flex flex-col gap-6 mt-8">
-        <h2 class="font-bold text-xl sm:text-2xl bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent">
+        <h2
+          class="font-bold text-xl sm:text-2xl bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-200 dark:to-gray-400 bg-clip-text text-transparent"
+        >
           My skills and expertise include:
         </h2>
         <div class="flex flex-col sm:flex-row gap-4 overflow-hidden relative">
-          <Card
-            className="card group animate-slide-up stagger-1"
-          >
+          <Card className="card group animate-slide-up stagger-1">
             <div
               class="rounded-full p-4 grid place-content-center bg-gradient-to-br from-yellow-400 to-orange-500 text-white w-fit group-hover:scale-110 transition-all duration-300 shadow-lg"
             >
@@ -60,9 +66,7 @@ const stylesFor = (topic: string) => {
               >.
             </p>
           </Card>
-          <Card
-            className="card group animate-slide-up stagger-2"
-          >
+          <Card className="card group animate-slide-up stagger-2">
             <div
               class="rounded-full p-4 grid place-content-center bg-gradient-to-br from-blue-400 to-purple-500 text-white w-fit group-hover:scale-110 transition-all duration-300 shadow-lg"
             >
@@ -144,6 +148,7 @@ const stylesFor = (topic: string) => {
                   title={experience.company}
                   description={experience.description}
                   date={experience.dates}
+                  link={experience.link}
                 >
                   <div
                     slot="icon"
@@ -193,9 +198,7 @@ const stylesFor = (topic: string) => {
           SKILLS.map((skillTopic) => {
             const s = stylesFor(skillTopic.topic);
             return (
-              <Card
-                className="card card-service p-6 hover-lift"
-              >
+              <Card className="card card-service p-6 hover-lift">
                 <div class="flex flex-col">
                   <div class="flex items-center gap-4 mb-4">
                     <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-950 dark:text-white">
@@ -217,6 +220,28 @@ const stylesFor = (topic: string) => {
             );
           })
         }
+      </div>
+    </section>
+    <section id="activities" class="flex flex-col mt-16 mb-8 animate-slide-up">
+      <h2
+        class="text-2xl md:text-4xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent text-end ms-auto mb-8"
+      >
+        Activities
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          ACTIVITIES.filter((__, i) => i < 3).map((activity) => (
+            <Activity activity={activity} />
+          ))
+        }
+      </div>
+      <div class="mt-6 flex justify-center">
+        <a
+          role="button"
+          href="/activities"
+          class="font-semibold px-6 py-3 text-base rounded-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-purple-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >See All Activities</a
+        >
       </div>
     </section>
   </section>

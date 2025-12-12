@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ACTIVITIES from "../assets/collections/activities.json";
+import Activity from "../components/Activity.astro";
+
+export const prerender = true;
+---
+
+<Layout>
+  <section class="flex flex-col gap-2">
+    <h1
+      class="font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-950 dark:text-white"
+    >
+      Activities
+    </h1>
+    <p
+      class="text-base md:text-lg sm:w-3/4 text-gray-600 dark:text-gray-400 text-pretty"
+    >
+      Throughout my journey, I've participated in various activities and
+      leadership roles that have shaped my skills in teamwork, organization, and
+      community building.
+    </p>
+  </section>
+  <section
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-screen-xl"
+  >
+    {ACTIVITIES.map((activity) => <Activity activity={activity} />)}
+  </section>
+</Layout>
