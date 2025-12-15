@@ -4,12 +4,12 @@ import { Image } from "astro:assets";
 const { pathname } = Astro.url;
 
 let links: string[];
-const linkNames = ["Home", "About", "Projects", "Services"];
+const linkNames = ["Home", "About", "Projects", "Skills", "Activities"];
 
 if (pathname == "/") {
-  links = ["#home", "#about", "#projects"];
+  links = ["#home", "#about", "#projects", "#skills", "#activities"];
 } else {
-  links = ["/", "/#about", "/projects"];
+  links = ["/", "/#about", "/projects", "/#skills", "/#activities"];
 }
 ---
 
